@@ -55,6 +55,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "mailpost",
   props: ["post"]
@@ -143,6 +146,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _components_MailPost_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/MailPost.vue */ "./resources/js/vue/components/MailPost.vue");
+/* harmony import */ var _assets_home_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../assets/home.jpg */ "./resources/assets/home.jpg");
 //
 //
 //
@@ -165,6 +169,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "home",
   components: {
@@ -175,7 +180,8 @@ __webpack_require__.r(__webpack_exports__);
       homeScreen: {
         title: "Welcome",
         mailPost: "Weekly mail posts with all things programming including HTML, CSS, JavaScript and more. Register today to never miss a post!",
-        homeScreen: true
+        homeScreen: true,
+        photo: _assets_home_jpg__WEBPACK_IMPORTED_MODULE_1__["default"]
       }
     };
   }
@@ -545,6 +551,21 @@ module.exports = function (cssWithMappingToString) {
 
   return list;
 };
+
+/***/ }),
+
+/***/ "./resources/assets/home.jpg":
+/*!***********************************!*\
+  !*** ./resources/assets/home.jpg ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/home.jpg?15b4dda662a903674c63eb456edc6e8a");
 
 /***/ }),
 
@@ -1807,6 +1828,12 @@ var render = function () {
         ],
         1
       ),
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "blog-photo" }, [
+      _vm.post.homeScreen
+        ? _c("img", { attrs: { src: _vm.post.photo, alt: "" } })
+        : _vm._e(),
     ]),
   ])
 }

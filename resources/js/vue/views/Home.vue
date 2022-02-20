@@ -20,7 +20,8 @@
     </div>
 </template>
 <script>
-import MailPost from '../components/MailPost.vue'
+import MailPost from '../components/MailPost.vue';
+import photo from '../../../assets/home.jpg'
 export default {
   name: "home",
   components: {
@@ -32,8 +33,9 @@ export default {
               title: "Welcome",
               mailPost: "Weekly mail posts with all things programming including HTML, CSS, JavaScript and more. Register today to never miss a post!",
               homeScreen: true,
-          }
-      }
+              photo: photo
+            }
+    }
   }
 };
 </script>

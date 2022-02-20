@@ -7,7 +7,10 @@
         <router-link class="link link-light" v-if="post.homeScreen" to="#">
           Login/Register
         </router-link>
-      </div>
+      </div>  
+    </div>
+    <div class="blog-photo">
+      <img v-if="post.homeScreen" :src="post.photo" alt="" />
     </div>
   </div>
 </template>

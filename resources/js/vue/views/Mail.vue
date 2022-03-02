@@ -1,5 +1,6 @@
 <template>
     <div class="home">
+        <Navigation />
         <div class="blog-card-wrap">
             <div class="container">
                 <h3>View More Mail</h3>
@@ -10,8 +11,12 @@
 </template>
 
 <script>
+import Navigation from "../components/Navigation.vue"
 export default {
-  name: "mail"
+  name: "mail",
+  components: {
+      Navigation
+  }
 };
 </script>
 <style lang="scss" scoped>

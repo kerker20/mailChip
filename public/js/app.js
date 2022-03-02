@@ -12,7 +12,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _components_Navigation_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/Navigation.vue */ "./resources/js/vue/components/Navigation.vue");
 //
 //
 //
@@ -20,12 +19,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  components: {
-    Navigation: _components_Navigation_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
-  },
+  components: {},
   mounted: function mounted() {}
 });
 
@@ -146,7 +141,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _components_MailPost_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/MailPost.vue */ "./resources/js/vue/components/MailPost.vue");
-/* harmony import */ var _assets_home_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../assets/home.jpg */ "./resources/assets/home.jpg");
+/* harmony import */ var _components_Navigation_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Navigation.vue */ "./resources/js/vue/components/Navigation.vue");
+/* harmony import */ var _assets_home_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../assets/home.jpg */ "./resources/assets/home.jpg");
 //
 //
 //
@@ -168,12 +164,27 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "home",
   components: {
-    MailPost: _components_MailPost_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
+    MailPost: _components_MailPost_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
+    Navigation: _components_Navigation_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
   },
   data: function data() {
     return {
@@ -181,7 +192,7 @@ __webpack_require__.r(__webpack_exports__);
         title: "Welcome",
         mailPost: "Weekly mail posts with all things programming including HTML, CSS, JavaScript and more. Register today to never miss a post!",
         homeScreen: true,
-        photo: _assets_home_jpg__WEBPACK_IMPORTED_MODULE_1__["default"]
+        photo: _assets_home_jpg__WEBPACK_IMPORTED_MODULE_2__["default"]
       }
     };
   }
@@ -228,6 +239,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony import */ var _components_Navigation_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/Navigation.vue */ "./resources/js/vue/components/Navigation.vue");
 //
 //
 //
@@ -239,8 +251,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  name: "mail"
+  name: "mail",
+  components: {
+    Navigation: _components_Navigation_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
+  }
 });
 
 /***/ }),
@@ -1774,12 +1791,7 @@ var render = function () {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "app-wrapper" }, [
-    _c(
-      "div",
-      { staticClass: "app" },
-      [_c("Navigation"), _vm._v(" "), _c("router-view")],
-      1
-    ),
+    _c("div", { staticClass: "app" }, [_c("router-view")], 1),
   ])
 }
 var staticRenderFns = []
@@ -1998,6 +2010,8 @@ var render = function () {
     "div",
     { staticClass: "home" },
     [
+      _c("Navigation"),
+      _vm._v(" "),
       _c("MailPost", { attrs: { post: _vm.homeScreen } }),
       _vm._v(" "),
       _vm._m(0),
@@ -2009,19 +2023,25 @@ var render = function () {
           [
             _c("h2", [
               _vm._v(
-                "\n                never miss a post. Register for your free account today!\n            "
+                "\n                    never miss a post. Register for your free account today!\n                "
               ),
             ]),
             _vm._v(" "),
             _c(
               "router-link",
               { staticClass: "router-button", attrs: { to: "#" } },
-              [_vm._v("\n                Register for MailChip\n            ")]
+              [
+                _vm._v(
+                  "\n                    Register for MailChip\n                "
+                ),
+              ]
             ),
           ],
           1
         ),
       ]),
+      _vm._v(" "),
+      _vm._m(1),
     ],
     1
   )
@@ -2038,6 +2058,58 @@ var staticRenderFns = [
         _c("div", { staticClass: "blog-cards" }),
       ]),
     ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass:
+          "max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl",
+      },
+      [
+        _c("div", { staticClass: "md:flex" }, [
+          _c("div", { staticClass: "md:shrink-0" }, [
+            _c("img", {
+              staticClass: "h-48 w-full object-cover md:h-full md:w-48",
+              attrs: {
+                src: "https://www.oberlo.com/media/1603954246-email-tracker-apps.jpg?fit=max&fm=jpg&w=1824",
+                alt: "Man looking at item at a store",
+              },
+            }),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "p-8" }, [
+            _c(
+              "div",
+              {
+                staticClass:
+                  "uppercase tracking-wide text-sm text-indigo-500 font-semibold",
+              },
+              [_vm._v("Case study")]
+            ),
+            _vm._v(" "),
+            _c(
+              "a",
+              {
+                staticClass:
+                  "block mt-1 text-lg leading-tight font-medium text-black hover:underline",
+                attrs: { href: "#" },
+              },
+              [_vm._v("Finding customers for your new business")]
+            ),
+            _vm._v(" "),
+            _c("p", { staticClass: "mt-2 text-slate-500" }, [
+              _vm._v(
+                "Getting a new business off the ground is a lot of hard work. Here are five ideas you can use to find your first customers."
+              ),
+            ]),
+          ]),
+        ]),
+      ]
+    )
   },
 ]
 render._withStripped = true
@@ -2102,20 +2174,23 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c(
+    "div",
+    { staticClass: "home" },
+    [_c("Navigation"), _vm._v(" "), _vm._m(0)],
+    1
+  )
 }
 var staticRenderFns = [
   function () {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "home" }, [
-      _c("div", { staticClass: "blog-card-wrap" }, [
-        _c("div", { staticClass: "container" }, [
-          _c("h3", [_vm._v("View More Mail")]),
-          _vm._v(" "),
-          _c("div", { staticClass: "blog-cards" }),
-        ]),
+    return _c("div", { staticClass: "blog-card-wrap" }, [
+      _c("div", { staticClass: "container" }, [
+        _c("h3", [_vm._v("View More Mail")]),
+        _vm._v(" "),
+        _c("div", { staticClass: "blog-cards" }),
       ]),
     ])
   },
